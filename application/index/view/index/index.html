@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <ul>
+            {volist name='data' id='v'}
+            <a {if condition="$v['select_type'] neq 1"}href="{:url("index/vote",['id'=>$v.id])}"{else}href="{:url("index/duovote",['id'=>$v.id])}"{/if}><li><h1>{$v.vname}</h1></li></a>
+            {/volist}
+
+        </ul>
+    </div>
+</body>
+</html>

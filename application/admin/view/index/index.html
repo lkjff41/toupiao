@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>投票后台管理</title>
+	<link rel="stylesheet" href="__PUBLIC__/css/base-cms.css">
+	<link rel="stylesheet" href="__PUBLIC__/css/vote-cms.css">
+	<script src="__PUBLIC__/js/base.js"></script>
+	<script src="__PUBLIC__/js/jquery.min.js"></script>
+	<script src="__PUBLIC__/js/vote-cms.js"></script>
+</head>
+<body>
+	<div class="view-cms">
+		<div class="head">后台投票管理系统</div>
+		<div class="cont">
+			<div class="vote_add_wrap">
+				<form action="" method="post">
+				<div class="dl in title">
+					<b>投票标题</b>
+					<div class="dd">
+						<div class="ip">
+							<input id="vote_title" name="vname" class="vote_title ipt" placeholder="请输入投票标题" type="text" maxlength="10">
+							<div class="tip">
+								<div class="tip_box">
+									<p>不超过10字</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="dl in info">
+					<b>投票内容</b>
+					<div class="dd">
+						<div class="ip">
+							<textarea class="ta vote_info" name="desciption" id="vote_info" placeholder="请输入参加投票比赛项目的简介"maxlength="50"></textarea>
+							<div class="tip">
+								<div class="tip_box">
+									<p>不超过50字</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="dl in info">
+					<b>选项</b>
+					<div class="dd">
+						<div class="ip">
+							<input class="xuanxian" name="select[]" placeholder=""maxlength="50">
+							<div class="tip">
+								<div class="tip_box">
+									<p>不超过50字</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="dl in info">
+					<b>选项</b>
+					<div class="dd">
+						<div class="ip">
+							<input class="xuanxian" name="select[]"  placeholder=""maxlength="50">
+							<div class="tip">
+								<div class="tip_box">
+									<p>不超过50字</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="b " id="addselect" >新增选项</div>
+					<select name="select_type" id="">
+						<option value="0">单选</option>
+						<option value="1">多选</option>
+					</select>
+					<input type="submit" value="提交投票">
+			</div>
+
+			</form>
+		</div>
+	</div>
+	<div class="view-pop">
+	</div>
+</body>
+</html>
+
+<script>
+	// xuanxian = $('.xuanxian').length;
+	// if (xuanxian>4){
+	// 	$("#addselect").click=""
+	// }
+	$('#addselect').click(function () {
+		$("#addselect").before('<div class="dl in info"> <b>选项</b> <div class="dd"> <div class="ip"> <input class="xuanxian" id="" name="select[]" placeholder=""maxlength="50"> <div class="tip"> <div class="tip_box"> <p>不超过50字</p> </div> </div> </div> </div> </div>');
+	})
+</script>
